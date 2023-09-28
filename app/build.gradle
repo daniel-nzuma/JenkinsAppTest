@@ -4,7 +4,9 @@ plugins {
 }
 
 final Properties props = new Properties()
-props.load(new FileInputStream("/Users/dahniel/Downloads/AndroidJavaDummyApp-master/build.properties"))
+def projectDirPath = project.projectDir.path
+
+props.load(new FileInputStream(projectDirPath+"/build.properties"))
 
 android {
     namespace 'com.fkorir.myapplication'
